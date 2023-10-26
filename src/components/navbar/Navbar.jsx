@@ -10,8 +10,8 @@ const Navbar = () => {
     const [toggle, setToggle] = React.useState(false);
 
     return (
-        <div className="bg-black">
-            <div className="container mx-auto bg">
+        <div className=" bg-black w-full h-24">
+            <div className="container mx-auto">
                 <nav className="w-full  justify-between px-6 items-center flex">
                     <Image src={logo} alt="logo" width={124} height={32} className="cursor-pointer sm:mt-4" priority={true} />
                     <ul className="list-none sm:flex hidden justify-end items-center flex-1">
