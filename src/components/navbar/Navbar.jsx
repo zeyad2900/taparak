@@ -26,7 +26,6 @@ const Navbar = () => {
                             </li>
                         ))}
                     </ul>
-
                     <div className="sm:hidden flex flex-1 justify-end items-center">
                         {toggle ? (
                             <AiOutlineClose className={`color-white w-[40px] h-[40px] cursor-pointer mr-4`} onClick={() => setToggle(false)} />

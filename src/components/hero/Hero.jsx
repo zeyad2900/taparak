@@ -17,7 +17,6 @@ const Hero = () => {
                     <Image alt="" src={img} style={{ width: "100%", height: "100%" }}></Image>
                 </div>
             </div>
-            <h1>test</h1>
         </div>
     );
 };
