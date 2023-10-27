@@ -20,7 +20,7 @@ const Navbar = () => {
                                 key={nav.id}
                                 className={`font-poppins font-normal cursor-pointer text-[16px] text-[#dfe6e9] ${
                                     index === navItems.length - 1 ? "mr-2" : "mr-10"
-                                } hover:border-b-2 hover:border-[#dfe6e9]`}
+                                } hover:border-b-2 hover:border-cyan-500`}
                             >
                                 <a href={`#${nav.id}`}>{nav.name}</a>
                             </li>
