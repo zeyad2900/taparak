@@ -1,12 +1,15 @@
 "use client";
 
 import React, { useState } from "react";
-import src from "../../assets/hero.jpg";
 import Image from "next/image";
+import src from "../../assets/hero.jpg";
 import "./Slide.css";
+import { FaArrowRightLong } from "react-icons/fa6";
+import { FaArrowLeftLong } from "react-icons/fa6";
 
 function Slider() {
     const [imgNum, setImgNum] = useState(0);
+
     const arrOfImg = [
         {
             id: 1,
@@ -64,34 +67,51 @@ function Slider() {
             img: src,
         },
     ];
+    const next = () => {
+        if (imgNum === arrOfImg.length - 1) {
+            setImgNum(0);
+        } else {
+            setImgNum(imgNum + 1);
+        }
+    };
+    const prev = () => {
+        if (imgNum === 0) {
+            setImgNum(arrOfImg.length - 1);
+        } else {
+            setImgNum(imgNum - 1);
+        }
+    };
 
     return (
         <div className=" my20 text-white bg-black">
             <div className=" container h-full  mx-auto w-full flex flex-col justify-start items-center">
-                <div className=" h-1/2 mt-0 w-2/3 overflow-hidden rounded-xl">
-                    <Image alt={arrOfImg[imgNum].id} src={arrOfImg[imgNum].img} style={{ width: "100%", height: "100%" }}></Image>
-                </div>
-                <div>
-                    <h1 className=" mt-16">{arrOfImg[imgNum].id}</h1>
-                </div>
-
-                <div>
+                <div className="flex justify-center items-center ">
                     <button
-                        className=" mt-auto"
+                        className=" mr-5 bg-cyan-500 text-white px-4 py-2 rounded-full transition duration-200 ease-in-out hover:bg-cyan-700 active:bg-purple-900 focus:outline-none"
                         onClick={() => {
-                            setImgNum(imgNum + 1);
+                            prev();
                         }}
                     >
-                        next
+                        <FaArrowLeftLong></FaArrowLeftLong>
                     </button>
 
+                    <div className=" h-1/2 mt-0 w-2/3 overflow-hidden rounded-xl ">
+                        <Image alt={arrOfImg[imgNum].id} src={arrOfImg[imgNum].img} style={{ width: "100%", height: "100%" }}></Image>
+                    </div>
                     <button
+                        className=" ml-5 bg-cyan-500 text-white px-4 py-2 rounded-full transition duration-200 ease-in-out hover:bg-cyan-700 active:bg-purple-900 focus:outline-none"
                         onClick={() => {
-                            setImgNum(imgNum - 1);
+                            next();
                         }}
                     >
-                        prev
+                        <FaArrowRightLong></FaArrowRightLong>
                     </button>
+                </div>
+                <div className=" mt-8 w-2/4 rounded-xl flex justify-center items-center">
+                    <h1 className="">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro a necessitatibus vero quasi numquam asperiores molestias quo eligendi officiis ipsa in, quidem cupiditate
+                        excepturi dolores assumenda explicabo dicta praesentium sint?
+                    </h1>
                 </div>
             </div>
         </div>
