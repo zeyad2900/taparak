@@ -1,10 +1,13 @@
-
-import Hero from '@/components/hero/Hero'
+import Between from "@/Ui/Between";
+import Hero from "@/components/hero/Hero";
+import Slider from "@/components/slider/Slider";
 
 export default function Home() {
-  return (
-    <main className=' overflow-hidden'>
-      <Hero/>
-    </main>
-  )
+    return (
+        <main>
+            <Hero />
+            <Between content="Our Projects" />
+            <Slider />
+        </main>
+    );
 }
