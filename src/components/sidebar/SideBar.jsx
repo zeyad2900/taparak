@@ -1,6 +1,8 @@
 import React from "react";
 import { FaFacebookF } from "react-icons/fa6";
 import { FaInstagram } from "react-icons/fa6";
+import { FaYoutube } from "react-icons/fa6";
+import { FaTiktok } from "react-icons/fa6";
 
 const SideBar = () => {
     return (
@@ -14,6 +16,16 @@ const SideBar = () => {
                 <a href="https://www.instagram.com/altabarakdevelopment?igshid=NTc4MTIwNjQ2YQ%3D%3D" target="blank">
                     <li className="text-white p-4 hover:bg-black hover:text-cyan-500 cursor-pointer flex justify-center items-center transition-colors duration-300 bg-cyan-500 rounded-full mb-2">
                         <FaInstagram></FaInstagram>
+                    </li>
+                </a>
+                <a href="https://www.instagram.com/altabarakdevelopment?igshid=NTc4MTIwNjQ2YQ%3D%3D" target="blank">
+                    <li className="text-white p-4 hover:bg-black hover:text-cyan-500 cursor-pointer flex justify-center items-center transition-colors duration-300 bg-cyan-500 rounded-full mb-2">
+                        <FaYoutube></FaYoutube>
+                    </li>
+                </a>
+                <a href="https://www.instagram.com/altabarakdevelopment?igshid=NTc4MTIwNjQ2YQ%3D%3D" target="blank">
+                    <li className="text-white p-4 hover:bg-black hover:text-cyan-500 cursor-pointer flex justify-center items-center transition-colors duration-300 bg-cyan-500 rounded-full mb-2">
+                        <FaTiktok></FaTiktok>
                     </li>
                 </a>
             </ul>

@@ -13,7 +13,7 @@ const Navbar = () => {
         <div className=" bg-black w-full h-24">
             <div className="container mx-auto">
                 <nav className="w-full  justify-between px-6 items-center flex">
-                    <Image src={logo} alt="logo" width={124} height={32} className="cursor-pointer sm:mt-4" priority={true} />
+                    <Image src={logo} alt="logo" width={124} height={32} className="cursor-pointer mt-8 sm:mt-4" priority={true} />
                     <ul className="list-none sm:flex hidden justify-end items-center flex-1">
                         {navItems.map((nav, index) => (
                             <li
@@ -28,9 +28,9 @@ const Navbar = () => {
                     </ul>
                     <div className="sm:hidden flex flex-1 justify-end items-center">
                         {toggle ? (
-                            <AiOutlineClose className={`color-white w-[40px] h-[40px] cursor-pointer mr-4`} onClick={() => setToggle(false)} />
+                            <AiOutlineClose className={`text-white w-[40px] h-[40px] cursor-pointer mr-4`} onClick={() => setToggle(false)} />
                         ) : (
-                            <CgMenuGridR className={`color-white w-[40px] h-[40px] cursor-pointer mr-4 mt-4`} onClick={() => setToggle(true)} />
+                            <CgMenuGridR className={`text-white w-[40px] h-[40px] cursor-pointer mr-4 mt-4`} onClick={() => setToggle(true)} />
                         )}
                         <div className={`${toggle ? "flex" : "hidden"} p-6 bg-[#fff] top-20 right-0 mx-4 my-2 min-w-[140px] rounded-xl sidebar`}>
                             <ul className="list-none flex flex-col">
