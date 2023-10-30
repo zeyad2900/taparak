@@ -40,6 +40,7 @@ const Navbar = () => {
                     {loggedIn ? "Logout" : "Login"}
                 </Link>
             </li>
+            {/* check here */}
           </ul>
           <div className="sm:hidden flex flex-1 justify-end items-center">
             {toggle ? (
