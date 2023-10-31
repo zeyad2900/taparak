@@ -10,7 +10,7 @@ import axios from "axios";
 export default function LoginPage() {
     const router = useRouter();
   const [user, setUser] = useState({
-    email: "",
+    username: "",
     password: "",
   });
   const [buttonDisabled, setButtonDisabled] = useState(false);
