@@ -4,10 +4,6 @@ export const navItems = [
         name: "Home",
     },
     {
-        id: "about",
-        name: "About",
-    },
-    {
         id: "contact",
         name: "Contact",
     },
