@@ -7,7 +7,6 @@ const Footer = () => {
         <div className=" h-screen bg-black w-full my-20">
             <h1 className="text-white">
                 omar
-            
             </h1>
         </div>
     )
