@@ -6,44 +6,37 @@ import { useRouter } from "next/navigation";
 import classes from "./page.module.css";
 import axios from "axios";
 
+
 export default function LoginPage() {
     const router = useRouter();
-    const [user, setUser] = useState({
-        username: "",
-        password: "",
-    });
-    const [buttonDisabled, setButtonDisabled] = useState(false);
-    const [loading, setLoading] = useState(false);
-    const onLogin = async () => {
-        try {
-          setLoading(true);
-          const response = await axios.post("/api/users", user);
-          console.log("Success", response.data);
-        //   toast.success("User Logged In"); // Display a success notification
-          router.push("/dashboard");
-        } catch (error) {
-          console.log("Error", error.message);
-        //   toast.error("Login failed"); // Display an error notification
-        } finally {
-          setLoading(false);
-        }
-      };
+  const [user, setUser] = useState({
+    email: "",
+    password: "",
+  });
+  const [buttonDisabled, setButtonDisabled] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const onLogin = async () => {
+    try {
+      setLoading(true);
+      const response = await axios.post("/api/users/login", user);
+      console.log("Success", response.data);
+    //   toast.success("User Logged In");
+      router.push("/dashboard");
+    } catch (error) {
+      console.log("Error", error.message);
+    } finally {
+      setLoading(false);
+    }
+  };
     
-      useEffect(() => {
-        if (user.username.length > 0 && user.password.length > 0) {
-          setButtonDisabled(false);
-        } else {
-          setButtonDisabled(true);
-        }
-      }, [user]);
+      // useEffect(() => {
+      //   if (user.username.length > 0 && user.password.length > 0) {
+      //     setButtonDisabled(false);
+      //   } else {
+      //     setButtonDisabled(true);
+      //   }
+      // }, [user]);
 
-    useEffect(() => {
-        if (user.username.length > 0 && user.password.length > 0) {
-            setButtonDisabled(false);
-        } else {
-            setButtonDisabled(true);
-        }
-    }, [user]);
     return (
         <div className="flex flex-col items-center justify-center min-h-screen py-2">
             <label className="text-white" htmlFor="username">
