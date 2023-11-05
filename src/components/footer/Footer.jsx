@@ -8,7 +8,7 @@ import { navItems, sideNavItems } from "@/constants";
 
 const Footer = () => {
     return (
-        <div className=" bg-black my-20">
+        <div className=" bg-black my-20 pt-100">
             <div className="container mx-auto">
                 <hr className="text white" />
                 <div className="text-white grid grid-cols-1 md:grid-cols-3 w-full mt-20">

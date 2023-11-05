@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^2.38.4",
     "axios": "^1.6.0",
     "bcrypt": "^5.1.1",
     "bcryptjs": "^2.4.3",
@@ -17,6 +18,7 @@
     "express-session": "^1.17.3",
     "jsonwebtoken": "^9.0.2",
     "knex": "^3.0.1",
+    "mongodb-client-encryption": "^2.9.1",
     "mongoose": "^7.6.3",
     "next": "13.5.6",
     "next-auth": "^4.24.3",

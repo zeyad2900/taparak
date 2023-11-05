@@ -9,7 +9,7 @@ import Link from "next/link";
 import { useParams } from "next/navigation";
 
 const Navbar = () => {
-    const page = useParams();
+  const page = useParams();
   const [toggle, setToggle] = React.useState(false);
   const [loggedIn, setLoggedIn] = React.useState(false);
 
@@ -36,9 +36,7 @@ const Navbar = () => {
               </li>
             ))}
             <li className="font-poppins font-normal cursor-pointer text-[16px] text-[#dfe6e9] mr-10 hover:border-b-2 hover:border-cyan-500">
-                <Link href="/login">
-                    {loggedIn ? "Logout" : "Login"}
-                </Link>
+              <Link href="/login">{loggedIn ? "Logout" : "Login"}</Link>
             </li>
             {/* check here */}
           </ul>
@@ -67,9 +65,7 @@ const Navbar = () => {
                       index === navItems.length - 1 ? "mr-2" : "mr-8"
                     } hover:border-b-2 hover:border-[#dfe6e9]`}
                   >
-                    <Link href={`#${nav.id}`}>
-                      {nav.name}
-                    </Link>
+                    <Link href={`#${nav.id}`}>{nav.name}</Link>
                   </li>
                 ))}
               </ul>

@@ -18,7 +18,7 @@ export async function connect() {
         console.log('Something goes wrong!');
         console.log(error);
     }
-        console.log('Something goes wrong!');
+        console.log('Something goes wrong!', error);
         console.log(error);
         
     }
