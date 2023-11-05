@@ -62,11 +62,6 @@ function Slider() {
             content: "hotel",
             img: src2,
         },
-        {
-            id: 11,
-            content: "hotel",
-            img: src,
-        },
     ];
     const next = () => {
         if (imgNum === arrOfImg.length - 1) {
